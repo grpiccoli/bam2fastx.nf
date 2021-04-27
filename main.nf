@@ -1,17 +1,17 @@
 #!/usr/bin/env nextflow
-Channel.fromPath("$params.refbam", type: 'file')
+
+// BAM2FASTX
+
+Channel.fromPath("$params.i_bam", type: 'file')
 .buffer(size:1)
 .set{
     refbam;
 }
 
-out_i="$params.outdir/indexes"
-out_ref="$params.outdir/fastas"
-
 process pbbam {
 	tag "pbbam.$x"
-    container "$params.bio/pbbam:1.6.0--h5b7e6e0_0"
-    publishDir out_i
+    container "$params.pbbam_con"
+    publishDir "$params.o_i"
 
 	input:
 	file x from refbam
@@ -26,10 +26,10 @@ process pbbam {
 	"""
 }
 
-process bam2fastq {
-	tag "bam2fastq.$bam"
-    container "$params.bio/bam2fastx:1.3.0--he1c1bb9_8"
-    publishDir out_ref
+process bam2fastx {
+	tag "bam2fastx.$bam"
+    container "$params.bam2fastx_con"
+    publishDir "$params.o_ref"
     cache 'lenient'
 
 	input:
@@ -44,6 +44,6 @@ process bam2fastq {
     name=\${name%.*}
     mv $bam \$name
     name=\${name%.*}
-    bam2fastq -o \$name \${name}.bam
+    bam2fast$params.f -o \$name \${name}.bam
 	"""
 }
