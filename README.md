@@ -2,9 +2,12 @@
 
 ## QUICK START
 ```
-nextflow run https://github.com/grpiccoli/bam2fastx.nf -profile <local|scrum> --i_bam ccs.bam
+nextflow run https://github.com/grpiccoli/bam2fastx.nf [-profile <{standard}|scrum>] --i_bam ccs.bam [--f <a|{q}>]
 ```
 
 ### OPTIONS:
-| --i_bam     input pacbio bam file  
-| --f         Optional, output format either "a" (fasta) or "q" (fastq - default)
+| Option    | Description
+| --------- | -------------------------------------------------------------------
+| -profile  | standard defaults to local executor or rapoi sets executor to slurm
+| --i_bam   | input pacbio bam file  
+| --f       | output format either "a" (fasta) or "q" (fastq - default)
