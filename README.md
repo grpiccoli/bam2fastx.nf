@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.4722467.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.4722467.svg)
+[![DOI](zenodo.4722467.svg)](https://zenodo.org/badge/latestdoi/361971295)
 
 # bam2fastx.nf
 
