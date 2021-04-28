@@ -16,3 +16,5 @@ nextflow run https://github.com/grpiccoli/bam2fastx.nf [-profile <{standard}|scr
 
 ### CITE
 Guillermo R. Piccoli. (2021, April 27). grpiccoli/bam2fastx.nf: (Version 1.3.0). Zenodo. http://doi.org/10.5281/zenodo.4722467
+
+[![Analytics](https://ga-beacon.appspot.com/G-0GE7FEF6BD/pbbioconda/blob/master/README.md)](https://github.com/PacificBiosciences/pbbioconda) 
