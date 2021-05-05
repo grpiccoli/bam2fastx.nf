@@ -2,7 +2,7 @@
 
 # bam2fastx.nf
 
-## QUICK START - BASIC USAGE
+## QUICK START - BASIC USAGE:
 ```
 nextflow run https://github.com/grpiccoli/bam2fastx.nf --i_bam ccs.bam
 ```
@@ -27,6 +27,14 @@ nextflow run https://github.com/grpiccoli/bam2fastx.nf --i_bam ccs.bam
 | --e           | local                   | nextflow executor (slurm, local, etc)  
 | --q           | quicktest               | queue/partition name  
 | --t           | 1h                      | max execution time  
+
+## REQUIREMENTS:
+1) nextflow. Instalation without sudo:
+```
+curl -s https://get.nextflow.io | bash
+```
+2) singularity, might require sudo:
+[sylabs.io/guides/3.5/user-guide/quick_start.html](https://sylabs.io/guides/3.5/user-guide/quick_start.html)
 
 ### CITE
 Guillermo R. Piccoli. (2021, April 27). grpiccoli/bam2fastx.nf: (Version 1.3.0). Zenodo. http://doi.org/10.5281/zenodo.4722467  

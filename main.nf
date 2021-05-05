@@ -56,6 +56,6 @@ process bam2fastx {
     name=\${name%.*}
     mv $bam \$name
     name=\${name%.*}
-    bam2fast$params.f -o \$name \${name}.bam
+    bam2fast$params.o_f -o \$name \${name}.bam
 	"""
 }
