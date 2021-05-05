@@ -8,21 +8,21 @@ nextflow run https://github.com/grpiccoli/bam2fastx.nf --i_bam ccs.bam
 ```
 
 ### OPTIONS:
-| Options       | Default Value           | Description
+| Options       | Default Value           | Description  
 | ------------- | ----------------------- | ---------------------------------------
 | --i_bam       | REQUIRED/NULL           | path to input pacbio bam file  
 | --o_f         | q                       | output format q=fastq a=fasta  
 | --o_i         | output/indexes          | output directory for index file  
 | --o_fx        | output/fastxs           | output directory for fastx files  
 
-| Advanced Opts |                         |
+| Advanced Opts | Default Value           | Description  
 | ------------- | ----------------------- | ---------------------------------------
 | --m           | 1.GB                    | RAM memory allocation  
 | --p           | 2                       | CPU core allocation  
 | --c_pbbam     | pbbam:1.6.0--h5b7e6e0_0 | pbbam container url:tag  
 | --c_bam2fastx | pbbam:1.6.0--h5b7e6e0_0 | bam2fastx container url:tag  
 
-| HPC Opts      |                         |
+| HPC Opts      | Default Value           | Description  
 | ------------- | ----------------------- | ---------------------------------------
 | --e           | local                   | nextflow executor (slurm, local, etc)  
 | --q           | quicktest               | queue/partition name  
