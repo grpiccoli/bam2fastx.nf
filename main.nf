@@ -9,9 +9,15 @@ Channel.fromPath("$params.i_bam", type: 'file')
 }
 
 process pbbam {
+	executor params.e
+    time params.t
+    queue params.q
+    memory params.m
+    cpus params.p
+    publishDir params.o_i
+    container params.c_pbbam
+
 	tag "pbbam.$x"
-    container "$params.pbbam_con"
-    publishDir "$params.o_i"
 
 	input:
 	file x from refbam
@@ -27,9 +33,15 @@ process pbbam {
 }
 
 process bam2fastx {
+	executor params.e
+    time params.t
+    queue params.q
+    memory params.m
+    cpus params.p
+    publishDir params.o_fx
+    container params.c_bam2fastx
+
 	tag "bam2fastx.$bam"
-    container "$params.bam2fastx_con"
-    publishDir "$params.o_ref"
     cache 'lenient'
 
 	input:
